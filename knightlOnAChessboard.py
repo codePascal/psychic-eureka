@@ -25,7 +25,7 @@ Possible moves: (1,1) (1,2)
                 (2,1) (2,2)
 Output: 2 -1
         -1 -1
-        
+
 Input: n = 5
 Possible moves: (1,1) (1,2) (1,3) (1,4)
                 (2,1) (2,2) (2,3) (2,4)
@@ -35,23 +35,24 @@ Output: 4 4 2 8
         4 2 4 4 
         2 4 -1 -1
         8 4 -1 1   
-        
+
 Notes:
 - if (3,4) does not work, then (4,3) should not work too (symmetric board)   
 - last permutation should never work
 - check if multiples of (a,b) are dividable by dimension of board 
 """
 
+
 # TODO: implement checkMovement function.
 def checkMovement(move):
     return
+
 
 # TODO: implement knighlOnAChessboard function.
 def knightlOnAChessboard(n):
     lst = [i for i in range(1, n)]
     for permutation in permutations(lst, 2):
         print(permutation)
-
 
 
 if __name__ == '__main__':
