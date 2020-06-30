@@ -6,7 +6,7 @@ import random
 import re
 import sys
 
-from itertools import permutations
+from itertools import product
 
 """
 L shape movement (a, b):
@@ -51,7 +51,7 @@ def checkMovement(move):
 # TODO: implement knighlOnAChessboard function.
 def knightlOnAChessboard(n):
     lst = [i for i in range(1, n)]
-    for permutation in permutations(lst, 2):
+    for permutation in product(lst, repeat=2):
         print(permutation)
 
 
