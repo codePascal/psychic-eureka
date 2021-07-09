@@ -5,3 +5,4 @@ A definition for an ellipse is: Given a circle c with centre M and radius r and 
 of the points that are equidistant from c and G form an ellipse.
 
 """
+raise NotImplementedError()

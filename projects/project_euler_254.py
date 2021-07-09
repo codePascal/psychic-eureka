@@ -29,6 +29,7 @@ def calculateSumGs(lst, large_number):
     print(result % large_number)
 
 
+raise NotImplementedError()
 #t = int(input())
 t = 1
 for _ in range(t):

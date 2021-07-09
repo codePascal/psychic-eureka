@@ -16,12 +16,14 @@ def is_prime(n):
         return True
     return False
 
+raise NotImplementedError()
 
 # define number
-n = 600851475143
+n = 13195  # 600851475143
 
 # find divisors for number n, divisor 1 and even divisors are not considered
 odd_divisors = [i for i in range(n, 3, -2) if n % i == 0]
+print(odd_divisors)
 
 # loop through possible divisors, if prime is found break
 i = 0

@@ -74,6 +74,7 @@ def reverse_fibbonacci(fn):
 
 
 if __name__ == '__main__':
+    raise NotImplementedError()
     # n = int(input())
     n = 1
     for _ in range(n):
