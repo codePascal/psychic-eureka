@@ -17,7 +17,7 @@ def is_prime(n):
     return False
 
 
-# find this prime number
+# find this th-prime number
 prime_search = 10001
 
 # initialize loop, 2 is already found as prime
