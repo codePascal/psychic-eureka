@@ -19,10 +19,8 @@ fibonacci = list()
 fibonacci.append(1)
 fibonacci.append(2)
 
-# counter
-i = 2
-
 # create Fibonacci sequence until value exceeds 4 million
+i = 2
 while True:
     if fibonacci[i - 2] + fibonacci[i - 1] < 4000000:
         fibonacci.append(fibonacci[i - 2] + fibonacci[i - 1])
