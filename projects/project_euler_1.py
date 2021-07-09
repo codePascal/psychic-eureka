@@ -9,4 +9,7 @@ https://projecteuler.net/problem=1
 Correct answer: 233168
 """
 
+# Pseudo
+# just sum a comprehensive list with values which are multiple of 3 or 5
+
 print('Project euler 1:', sum([i for i in range(1000) if (i % 3 == 0 or i % 5 == 0)]))
