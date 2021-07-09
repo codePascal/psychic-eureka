@@ -14,19 +14,28 @@ https://projecteuler.net/problem=2
 Correct answer: 4613732
 """
 
-# initialize Fibonacci sequence with first two elements
-fibonacci = list()
-fibonacci.append(1)
-fibonacci.append(2)
+# Pseudo
+# starting from first values 1, 1, each third number is even, denoted as (.)
+# 1, 1, (2), 3, 5, (8), 13, 21, (34), 55, 89, (144), 233, 377, ...
+# the above list can be expressed in Fibonacci terms
+# 1, 1, (1+1), 1+2, 2+3, (3+5), 5+8, 8+13, (13+21), ...
+# the even element is the sum of the two odd elements before, hence the next
+# two odd terms could be expressed as a function of the two odd terms before
+# 1, 1, (1+1), 1+2*1, 2*1+3*1, (3+5), 3+2*5, 2*3+3*5, (13+21), ...
+# from the list above it can be seen that the next odd terms can be expressed
+# as a function of the odd terms x, y before
+# x1 = x0 + 2y0, y1 = 2*x0 + 3*y0
+# the even term is the the summation of the odd terms before
 
-# create Fibonacci sequence until value exceeds 4 million
-i = 2
-while True:
-    if fibonacci[i - 2] + fibonacci[i - 1] < 4000000:
-        fibonacci.append(fibonacci[i - 2] + fibonacci[i - 1])
-        i += 1
-    else:
-        break
 
-# compute sum of even-valued terms
-print('Project euler 2:', sum([i for i in fibonacci if i % 2 == 0]))
+def fibonacci():
+    x = 1
+    y = 1
+    sum = 0
+    while sum < 4000000:
+        sum += x + y
+        x, y = x + 2 * y, 2 * x + 3 * y
+    return sum
+
+
+print('Project euler 2:', fibonacci())
