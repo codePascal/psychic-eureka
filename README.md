@@ -8,4 +8,6 @@ To run a program, simply run
 
 where `i` denotes the project number.
 
-Solved projects have the correct answer written to the description.
+Solved projects have the correct answer written to the description. If you try
+to run problems that are not implemented yet, a `NotImplementedError` will be
+raised.
