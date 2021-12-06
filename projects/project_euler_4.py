@@ -14,7 +14,7 @@ from itertools import combinations_with_replacement
 
 
 def is_palindromic(n):
-    """ Returns if number is palindromic. """
+    """ Returns true if number is palindromic. """
     n_list = [int(i) for i in str(n)]
     return n_list == n_list[::-1]
 
